@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::get('test', function () {
+    Log::info("Test");
     for($x = 0; $x < 10; $x++) {
         dispatch(new \App\Jobs\ProcessPodcast());
     }
