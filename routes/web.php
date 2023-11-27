@@ -23,4 +23,10 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::get('test', function () {
+    for($x = 0; $x < 10; $x++) {
+        dispatch(new \App\Jobs\ProcessPodcast());
+    }
+});
+
 require __DIR__.'/auth.php';
