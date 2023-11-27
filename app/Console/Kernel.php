@@ -13,10 +13,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->job(new ProcessPodcast, 'default', 'redis')->everyMinute();
-        $schedule->call(function () {
-            dd("test");
-        })->everyMinute();
+        $schedule->job(new ProcessPodcast())->everyMinute();
     }
 
     /**
