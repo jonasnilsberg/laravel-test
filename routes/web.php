@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FlightController;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
@@ -24,11 +25,13 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::get('flight', [FlightController::class, 'show'])->middleware(['auth'])->name('flight');
+
 Route::get('test', function () {
-    Log::info("Test");
-    for($x = 0; $x < 10; $x++) {
+    Log::info('Test');
+    for ($x = 0; $x < 10; $x++) {
         dispatch(new \App\Jobs\ProcessPodcast());
     }
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

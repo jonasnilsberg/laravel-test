@@ -25,8 +25,8 @@ class ProcessPodcast implements ShouldQueue
      */
     public function handle(): void
     {
-        Log::info("SLEEP STARTED");
+        Log::info('SLEEP STARTED');
         sleep(10);
-        Log::info("SLEEP FINISHED");
+        Log::info('SLEEP FINISHED');
     }
 }
