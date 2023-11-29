@@ -18,7 +18,7 @@
         <x-primary-button class="mt-2">
             {{ __('Add flight') }}
         </x-primary-button>
-        <x-action-message on="flight-saved">
+        <x-action-message on="test">
             {{ __('Saved.') }}
         </x-action-message>
         <p class="text-white" wire:poll>{{$count}}</p>
