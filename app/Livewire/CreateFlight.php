@@ -25,7 +25,6 @@ class CreateFlight extends Component
             'company' => $this->company,
         ]);
 
-        //$this->dispatch('flight-saved');
         redirect()->route('flight')->with('success', 'Success');
     }
 

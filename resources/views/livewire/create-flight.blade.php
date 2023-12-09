@@ -1,4 +1,5 @@
 <div class="pb-10">
+    <h3 class="text-white text-xl">Create new flight</h3>
     <form wire:submit.prevent="save">
         <div class="flex mt-2">
             <div>
@@ -21,6 +22,6 @@
         <x-action-message on="test">
             {{ __('Saved.') }}
         </x-action-message>
-        <p class="text-white" wire:poll>{{$count}}</p>
+        <p class="text-white">{{$count}}</p>
     </form>
 </div>

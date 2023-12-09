@@ -9,8 +9,6 @@ class FlightController extends Controller
 {
     public function show(): View
     {
-        return view('flight', [
-            'flights' => Flight::all(),
-        ]);
+        return view('flight');
     }
 }
